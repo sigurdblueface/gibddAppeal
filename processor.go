@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"flag"
 	"fmt"
 	"gopkg.in/yaml.v2"
@@ -17,16 +16,12 @@ type Processor struct {
 	values map[string]interface{}
 }
 
-func (p *Processor) Init() error{
+func (p *Processor) Init(){
 	templateFile := flag.String("template", "./template.gotmpl", "pass here a template file path")
 	valuesFile := flag.String("values", "./values.yaml", "pass here a values file path")
 	flag.Parse()
-	if flag.Parsed() != true {
-		return errors.New("args were not parsed successfully")
-	}
 	p.templateFile = *templateFile
 	p.valuesFile = *valuesFile
-	return nil
 }
 
 func (p * Processor) Execute() error{

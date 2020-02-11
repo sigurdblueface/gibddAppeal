@@ -7,11 +7,8 @@ import (
 
 func main(){
 	p := Processor{}
-	err := p.Init()
-	if err != nil{
-		log.Printf("Error within initialization: %v", err)
-	}
-	err = p.Execute()
+	p.Init()
+	err := p.Execute()
 	if err != nil{
 		log.Printf("Error while injecting values: %v", err)
 		os.Exit(1)
