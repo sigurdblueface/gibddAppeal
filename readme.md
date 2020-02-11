@@ -9,4 +9,4 @@ Flags: <br>
 git clone <link>
 go build gibddappeal
 ```
-Built binary can merge any template-values pair, In the attached examples it serves composing appeals to russian traffic police department.
+Built binary is able to merge any template-values pair, In the attached examples it serves composing appeals to russian traffic police department.
