@@ -6,7 +6,7 @@ Flags: <br>
   
 ### howto
 ```shell script
-git get https://github.com/sigurdblueface/gibddAppeal
+go get https://github.com/sigurdblueface/gibddAppeal
 go build gibddappeal
 ```
 Built binary is able to merge any template-values pair, In the attached examples it serves composing appeals to russian traffic police department.
