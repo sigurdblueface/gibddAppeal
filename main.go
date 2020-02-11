@@ -6,8 +6,7 @@ import (
 )
 
 func main(){
-	p := Processor{}
-	p.Init()
+	p := (&Processor{}).Init()
 	err := p.Execute()
 	if err != nil{
 		log.Printf("Error while injecting values: %v", err)

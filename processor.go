@@ -16,12 +16,13 @@ type Processor struct {
 	values map[string]interface{}
 }
 
-func (p *Processor) Init(){
+func (p *Processor) Init() Processor{
 	templateFile := flag.String("template", "./template.gotmpl", "pass here a template file path")
 	valuesFile := flag.String("values", "./values.yaml", "pass here a values file path")
 	flag.Parse()
 	p.templateFile = *templateFile
 	p.valuesFile = *valuesFile
+	return *p
 }
 
 func (p * Processor) Execute() error{
